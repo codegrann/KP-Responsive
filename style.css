@@ -1,0 +1,242 @@
+/* :root{ */
+    /* color-scheme: dark; */
+/* } */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(21, 218, 198);
+}
+
+.head-container {
+    background-color: #23424A;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    gap: 0.50rem;
+    margin: 0 auto;
+
+}
+
+/*head-container img{
+    max-width: 100%;
+}*/
+.hero-text {
+    /*border: 2px solid rgb(21, 2, 2);*/
+    padding: 2rem;
+    padding-top: 0;
+    color: beige;
+    width: 70%;
+
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+}
+
+.hero-text a {
+    background-color: turquoise;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.75rem;
+    border-radius: 100px;
+    /* margin-top: 5rem;*/
+}
+
+.hero-text a:hover {
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.img-container {
+    /*border: 2px solid red;*/
+    align-self: center;
+    justify-content: center;
+}
+
+.img-container img {
+    /*width: 300px;*/
+    max-width: 100%;
+}
+
+
+#section_2 {
+    display: flex;
+    /* border: 2px solid black; */
+    padding: 1.75rem;
+    justify-content: center;
+}
+
+.section_2_divs {
+    background-color: rgb(129, 29, 129);
+    /* border: 2px solid black; */
+    max-width: 10rem;
+    min-height: 15rem;
+    margin: 0.75rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    transition: max-width 1s, min-height 1s, background-color 1s;
+    transition-timing-function: ease-out;
+    /* transition-delay: 0.1s; */
+}
+
+.section_2_divs:hover {
+    background-color: rgb(129, 29, 129, 0.7);
+    max-width: 11rem;
+    min-height: 16rem;
+
+}
+
+#section_3 {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    padding: 1.75rem;
+}
+
+.section_3_divs img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.section_3_divs {
+    /* background-color: rgb(129, 29, 129); */
+    /* border: 2px solid black; */
+    max-width: 10rem;
+    max-height: 15rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.centered_img {
+    align-self: center;
+}
+
+.section_3_divs:hover {
+    max-width: 12rem;
+}
+
+#section_4 {
+    background-color: antiquewhite;
+    min-width: 30rem;
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.section_4divs {
+    background-color: purple;
+    margin: 1rem;
+    border-radius: 12px;
+    padding: 1.75rem;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* transform: none; */
+    /* transition: transform 1s ease-out; */
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: ccubic-bezier(.18,.89,.32,1.28);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes move {
+    10% {transform: rotate(360deg);}
+    25%{transform: translate(1.5cm, 1.5cm);}
+    50%{transform: skew(15deg);}
+}
+
+/* .section_4divs+div:hover { */
+    /* transform: rotate(90deg); */
+    /* transform: translate(2rem, 3rem); */
+    /* transform: skew(10deg, 10deg); */
+    transform: scale(0.5);
+/* } */
+
+#nxt_btn {
+    /* background-color: grey; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+
+}
+
+#next_page {
+    background-color: blue;
+    padding: 0.5em;
+    color: wheat;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 0.75em;
+}
+
+#next_page:hover {
+    background-color: rgb(66, 66, 170);
+}
+
+
+
+
+
+
+@media (max-width: 450px) {
+    .head-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        max-width: 20rem;
+    }
+
+    .hero-text {
+        padding-top: 0.75rem;
+        padding-left: 0;
+    }
+
+    .hero-text h2 {
+        font-size: 0.85rem;
+    }
+
+    .hero-text p {
+        font-size: 0.60rem;
+    }
+
+    .hero-text a {
+        font-size: 0.50rem;
+        /*margin-top: 1.75rem;*/
+    }
+
+    .img-container {
+        align-self: flex-start;
+        width: 12rem;
+    }
+
+    #section_2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+
+    }
+
+    .section_2_divs {
+        min-width: 5rem;
+        min-height: 7.5rem;
+        margin: 0.25rem;
+    }
+
+    .section_2_divs:hover {
+        min-width: 5rem;
+        min-height: 7.5rem;
+    }
+}
